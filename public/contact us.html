@@ -1,53 +1,197 @@
+.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <!-- Bootstrap CSS -->
+    <title>Contact Us - Martian Ventures</title>
+    <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Martian Ventures</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about us.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact us.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="structure.html">Structure</a>
-                    </li>
-                </ul>
+    <!-- Replace existing navbar in services.html, contact us.html, and index.html with: -->
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html" data-aos="fade-right">
+            <img src="assets/logo.jpg" alt="Martian Ventures Logo" height="45">
+            <span class="brand-text">Martian Ventures</span>
+        </a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                    <a class="nav-link" href="about us.html">
+                        <i class="fas fa-info-circle"></i>About Us
+                    </a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                    <a class="nav-link" href="services.html">
+                        <i class="fas fa-cog"></i>Services
+                    </a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                    <a class="nav-link" href="contact us.html">
+                        <i class="fas fa-envelope"></i>Contact
+                    </a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                    <a class="nav-link" href="structure.html">
+                        <i class="fas fa-sitemap"></i>Structure
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Contact Us</h1>
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Information -->
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Get in Touch</h3>
+                        <div class="info-item mb-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Location</h4>
+                            <p>Plot 11, Archer Road, Kololo, Kampala</p>
+                        </div>
+                        <div class="info-item mb-4">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Email</h4>
+                            <p>wb23services@gmail.com</p>
+                        </div>
+                        <div class="info-item mb-4">
+                            <i class="fas fa-phone"></i>
+                            <h4>Phone</h4>
+                            <p>MTN: +256764203494</p>
+                            <p>Airtel: +256742850126</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="contact-form-wrapper">
+                        <h3 class="mb-4">Send us a Message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" placeholder="Message" style="height: 150px" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Page Content -->
-    <div class="container mt-5">
-        <!-- Add your page-specific content here -->
-    </div>
+    <!-- Map Section -->
+    <section class="map-section" data-aos="fade-up">
+        <div class="container-fluid p-0">
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4539252523533!2d32.59397!3d0.335556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb0932058ea7%3A0x2c4c8fd6c9101ff7!2sKololo%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2sus!4v1711728000000!5m2!1sen!2sus"
+                    width="85%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2023 Martian Ventures. All rights reserved.</p>
+    <footer class="footer bg-dark text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4>About Us</h4>
+                    <p>Leading provider of innovative energy solutions in the oil and gas sector.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i>wb23services@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>MTN: +256764203494</p>
+                    <p><i class="fas fa-phone"></i>Airtel: +256742850126</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container text-center">
+                <p class="mb-0">&copy; 2025 Martian Ventures. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
