@@ -279,6 +279,16 @@ function initTeamHover() {
         });
     });
 }
+// Hero Parallax Effect
+function initHeroParallax() {
+    const hero = document.querySelector('.hero-section');
+    if (!hero) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
+    });
+}
 
 // Timeline animation
 function initTimelineAnimation() {
@@ -294,6 +304,88 @@ function initTimelineAnimation() {
 
     timelineItems.forEach(item => observer.observe(item));
 }
+// Service Cards Interaction
+function initServiceCards() {
+    const cards = document.querySelectorAll('.service-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.querySelector('.service-icon').style.transform = 'scale(1.1) rotate(5deg)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.querySelector('.service-icon').style.transform = 'scale(1) rotate(0)';
+        });
+    });
+}
+// Testimonials Slider
+function initTestimonials() {
+    const slider = document.querySelector('.testimonial-slider');
+    if (!slider) return;
+
+    let currentSlide = 0;
+    const slides = slider.querySelectorAll('.testimonial-item');
+    const totalSlides = slides.length;
+    
+    function updateSlider() {
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+            slide.style.opacity = index === currentSlide ? '1' : '0';
+        });
+    }
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }, 5000);
+
+    updateSlider();
+}
+// Image Lightbox
+function initLightbox() {
+    const images = document.querySelectorAll('.lightbox-image');
+    
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = `
+                <div class="lightbox-content">
+                    <img src="${this.src}" alt="${this.alt}">
+                    <button class="lightbox-close">&times;</button>
+                </div>
+            `;
+            
+            document.body.appendChild(lightbox);
+            document.body.style.overflow = 'hidden';
+
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === this || e.target.className === 'lightbox-close') {
+                    this.remove();
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    });
+}
+// Map Interaction
+function initMapInteraction() {
+    const mapWrapper = document.querySelector('.map-wrapper');
+    if (!mapWrapper) return;
+
+    const iframe = mapWrapper.querySelector('iframe');
+    
+    mapWrapper.addEventListener('mouseenter', () => {
+        iframe.style.filter = 'grayscale(0) contrast(1)';
+        mapWrapper.style.transform = 'scale(1.02)';
+    });
+
+    mapWrapper.addEventListener('mouseleave', () => {
+        iframe.style.filter = 'grayscale(0.2) contrast(1.2)';
+        mapWrapper.style.transform = 'scale(1)';
+    });
+}
+// Initialize everything when DOM is ready
+document.addEventListener('DOMContentLoaded', initializeAll);
 
 // Parallax effect
 function initParallaxEffect() {
