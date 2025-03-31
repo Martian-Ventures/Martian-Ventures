@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function initializeAll() {
     initAOS();
     initNavbar();
+    initLogoAnimation();
+    initTeamImageEffects()
     initStatsCounter();
     initSmoothScroll();
     initContactForm();
@@ -14,11 +16,13 @@ function initializeAll() {
     initBackToTop();
     initTeamHover();
     initTimelineAnimation();
+    initTestimonials()
     initParallaxEffect();
     initVisionCardEffects();
     initMissionPointsAnimation();
     initScrollReveal();
     initImageLazyLoad();
+    initServiceCards()
 }
 
 // AOS Animation initialization
@@ -37,35 +41,54 @@ function initAOS() {
 function initNavbar() {
     const navbar = document.querySelector('.custom-navbar');
     let lastScroll = 0;
-    let scrollTimeout;
 
     window.addEventListener('scroll', () => {
-        if (scrollTimeout) {
-            window.cancelAnimationFrame(scrollTimeout);
-        }
-
-        scrollTimeout = window.requestAnimationFrame(() => {
-            const currentScroll = window.pageYOffset;
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            navbar.classList.add('navbar-scrolled');
             
-            if (currentScroll > 50) {
-                navbar.classList.add('navbar-scrolled');
-                
-                if (currentScroll > lastScroll && currentScroll > 300) {
-                    navbar.style.transform = 'translateY(-100%)';
-                    navbar.style.opacity = '0';
-                } else {
-                    navbar.style.transform = 'translateY(0)';
-                    navbar.style.opacity = '1';
-                }
+            if (currentScroll > lastScroll && currentScroll > 300) {
+                navbar.style.transform = 'translateY(-100%)';
             } else {
-                navbar.classList.remove('navbar-scrolled');
                 navbar.style.transform = 'translateY(0)';
-                navbar.style.opacity = '1';
             }
-            
-            lastScroll = currentScroll;
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+    }
+    // New Logo Animation
+function initLogoAnimation() {
+    const logo = document.querySelector('.navbar-brand img');
+    if (!logo) return;
+
+    logo.addEventListener('mouseover', () => {
+        logo.style.transform = 'scale(1.1) rotate(10deg)';
+    });
+
+    logo.addEventListener('mouseout', () => {
+        logo.style.transform = 'scale(1) rotate(0)';
+    });
+}
+// Enhanced Team Image Effects
+function initTeamImageEffects() {
+    const teamImages = document.querySelectorAll('.team-image');
+    
+    teamImages.forEach(image => {
+        image.addEventListener('mouseover', () => {
+            image.style.transform = 'scale(1.05)';
+            image.style.borderColor = 'var(--secondary-color)';
+        });
+
+        image.addEventListener('mouseout', () => {
+            image.style.transform = 'scale(1)';
+            image.style.borderColor = 'var(--accent-color)';
         });
     });
+}
 
     // Highlight active nav item
     const navLinks = document.querySelectorAll('.nav-link');
@@ -76,7 +99,7 @@ function initNavbar() {
             link.classList.add('active');
         }
     });
-}
+
 
 // Enhanced stats counter with animation
 function initStatsCounter() {
@@ -122,6 +145,7 @@ function initStatsCounter() {
     if (statsSection) statsObserver.observe(statsSection);
 }
 
+
 // Enhanced smooth scroll functionality
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -162,21 +186,25 @@ function initVisionCardEffects() {
     });
 }
 
-// Mission points animation
+// Enhanced Mission Points Animation
 function initMissionPointsAnimation() {
-    const missionPoints = document.querySelectorAll('.mission-points li');
+    const points = document.querySelectorAll('.mission-points li');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = `slideIn 0.5s ease-out ${index * 0.2}s forwards`;
-                entry.target.style.opacity = '1';
+                setTimeout(() => {
+                    entry.target.style.transform = 'translateX(0)';
+                    entry.target.style.opacity = '1';
+                }, index * 200);
             }
         });
     }, { threshold: 0.5 });
 
-    missionPoints.forEach(point => {
+    points.forEach(point => {
+        point.style.transform = 'translateX(-20px)';
         point.style.opacity = '0';
+        point.style.transition = 'all 0.5s ease-out';
         observer.observe(point);
     });
 }
