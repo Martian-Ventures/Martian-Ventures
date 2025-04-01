@@ -851,30 +851,54 @@ main {
 
 /* Map Section Styles */
 .map-section {
-    position: relative;
-    margin: 3rem 0;
+    padding: 4rem 0;
+    background: #ffffff;
 }
 
 .map-wrapper {
     position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
 }
 
 .map-wrapper iframe {
-    display: block;
     width: 100%;
     height: 450px;
-    filter: grayscale(0.2) contrast(1.2);
-    transition: var(--transition);
-    border: 0;
+    border: none;
+    display: block;
+    filter: grayscale(0.3);
+    transition: all 0.3s ease;
+}
+
+.map-wrapper:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .map-wrapper:hover iframe {
-    filter: grayscale(0) contrast(1);
+    filter: grayscale(0);
 }
 
+/* Map Responsive Styles */
+@media (max-width: 1200px) {
+    .map-wrapper {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-section {
+        padding: 3rem 0;
+    }
+
+    .map-wrapper iframe {
+        height: 350px;
+    }
+}
 /* Footer Styles */
 .footer {
     background: var(--gradient-dark);
