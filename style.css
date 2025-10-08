@@ -82,7 +82,27 @@ main {
     height: 45px;
     transition: var(--transition);
 }
+
+/* Ensure brand text in the navbar is visible (white) */
 .brand-text{color: white;}
+.navbar-brand .brand-text,
+.custom-navbar .brand-text {
+    color: #ffffff !important;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+}
+
+/* Give the brand text a subtle backdrop so it remains readable over the navbar gradient */
+.navbar-brand .brand-text {
+    background: #ffffff !important;
+    color: var(--primary-color) !important;
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    line-height: 1;
+    z-index: 1100;
+    box-shadow: 0 6px 18px rgba(10,30,60,0.06);
+}
 
 .brand-text,
 .custom-navbar .brand-text {
