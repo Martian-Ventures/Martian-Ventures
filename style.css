@@ -696,6 +696,62 @@ main {
     border-color: transparent;
 }
 
+/* Feature overview boxes */
+.features-overview .feature-box {
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(10,30,60,0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid rgba(10,30,60,0.04);
+}
+
+.features-overview .feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 60px rgba(10,30,60,0.12);
+}
+
+.feature-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: #fff;
+    margin: 0 auto 10px;
+    box-shadow: 0 10px 30px rgba(52,152,219,0.12);
+}
+
+.feature-box h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.feature-box p {
+    color: #5a5a5a;
+}
+
+/* Hero CTA polish */
+.hero-buttons .btn-glow {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+
+/* Stats hover boost */
+.stat-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(10,30,60,0.08);
+}
+
+/* Small responsive tweak */
+@media (max-width: 576px) {
+    .service-card .service-cta {
+        display: block;
+        margin-bottom: 0.6rem;
+    }
+}
+
 /* Services Section Styles */
 .service-card {
     background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
@@ -790,6 +846,34 @@ main {
 .service-features li {
     margin-bottom: 0.55rem;
     color: #444;
+}
+
+/* Feature list icon style */
+.service-features i {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    box-shadow: 0 6px 18px rgba(52,152,219,0.12);
+    flex-shrink: 0;
+}
+
+/* Responsive grid: show 3 cards per row on large screens */
+@media (min-width: 1200px) {
+    .services-section .row > .col-lg-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+/* Small polish for CTA inside cards (if present) */
+.service-content .service-cta + .service-link {
+    margin-left: 0.8rem;
 }
 
 .service-link {
