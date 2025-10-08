@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martian Ventures - Softwareas as Service</title>
+    <link rel="icon" href="assets/log1.png" type="image/png">
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html" data-aos="fade-right">
+            <img src="assets/logo.jpg" alt="Martian Ventures Logo" height="45">
+            <span class="brand-text">Martian Ventures</span>
+        </a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                    <a class="nav-link" href="about us.html">
+                        <i class="fas fa-info-circle"></i>About Us
+                    </a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                    <a class="nav-link" href="services.html">
+                        <i class="fas fa-cog"></i>Services
+                    </a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                    <a class="nav-link" href="contact us.html">
+                        <i class="fas fa-envelope"></i>Contact
+                    </a>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center" data-aos="fade-up">
+                <div class="welcome-header">
+                    <h1 class="main-title">Welcome to Martian Ventures</h1>
+                    <div class="animated-bar"></div>
+                </div>
+                <div class="welcome-text" data-aos="fade-up" data-aos-delay="200">
+                    <p class="lead">Early  Stage Ventures firm with focus on software as a service</p>
+                    <p class="subtitle">Your Trusted Partner in Software as a service</p>
+                    <p class="welcome-message">
+                        Discover innovative and sustainable Technological solutions that drive the future.
+                        With cutting-edge technology and expert teams, we deliver excellence in
+                        every project.
+                    </p>
+                </div>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#services" class="btn btn-primary btn-lg btn-glow me-3">
+                        <i class="fas fa-cog me-2"></i>
+                        Explore Our Services
+                    </a>
+                    <a href="contact us.html" class="btn btn-outline-light btn-lg btn-hover-slide">
+                        <i class="fas fa-envelope me-2"></i>
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Feature Highlights -->
+    <section class="features-overview py-5">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-tachometer-alt fa-2x"></i>
+                        </div>
+                        <h4>Real-time Insights</h4>
+                        <p class="mb-3">Live telemetry and dashboards that keep your operations visible and actionable.</p>
+                        <a href="services.html#scada" class="service-cta">Explore SCADA</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-robot fa-2x"></i>
+                        </div>
+                        <h4>Predictive Maintenance</h4>
+                        <p class="mb-3">AI-driven analytics that spot issues before they become outages.</p>
+                        <a href="services.html#predictive" class="service-cta">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-drone fa-2x"></i>
+                        </div>
+                        <h4>Drone Surveillance</h4>
+                        <p class="mb-3">Aerial inspections and mapping that accelerate field operations and safety checks.</p>
+                        <a href="services.html#drone" class="service-cta">View Use Cases</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Our Projects</h2>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-oil-well"></i>
+                        </div>
+                        <h3>Enforced Learning Management System (LMS)</h3>
+                        <p>This system is designed to train oil and gas industry workers on company policies, safety procedures, and job responsibilities</p>
+                            <a href="services.html#lms" class="service-cta">Request Demo</a>
+                            <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>SCADA System</h3>
+                        <p>Real-time plant intelligence,Performance Ratio &amp; Yield analytics, alarm management, remote monitoring, historical trending and predictive maintenance. Integrates seamlessly with EMS, BMS &amp; weather stations for consolidated operational visibility.</p>
+                            <a href="services.html#scada" class="service-cta">View Details</a>
+                            <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Predictive Maintenance Solutions</h3>
+                        <p>These AI-driven solutions analyze equipment performance to predict failures before they occur.</p>
+                            <a href="services.html#predictive" class="service-cta">Get Started</a>
+                            <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4" data-aos="fade-up">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-label">Expert Team Members</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="stat-number" data-count="05">0</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="stat-number" data-count="81">0</div>
+                        <div class="stat-label">Client Satisfaction %</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4>About Us</h4>
+                    <p>innovative Technological Solutions.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact us.html">Contact</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        
+                        <p><i class="fas fa-phone me-2"></i> MTN: +256764203494</p>
+                        <p><i class="fas fa-phone me-2"></i> Airtel: +256742850126</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Plot 11, Archer Road, Kololo, Kampala</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container text-center">
+                <p class="mb-0">&copy; 2025 Martian Ventures. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
