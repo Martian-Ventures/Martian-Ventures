@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Preload main image to improve LCP -->
+    <link rel="preload" as="image" href="assets/oil-ELM.jpg">
 </head>
 <body>
     <!-- Navbar -->
@@ -59,7 +61,7 @@
                 <div class="col-md-6" data-aos="fade-up">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/oil-ELM.jpg" alt="LMS" class="img-fluid">
+                            <img src="assets/oil-ELM.jpg" alt="LMS" class="img-fluid" width="1200" height="700" fetchpriority="high" decoding="async">
                             <div class="service-overlay">
                                 <i class="fas fa-search"></i>
                             </div>
@@ -77,22 +79,27 @@
                     </div>
                 </div>
 
-                <!-- Gas Production -->
+                <!-- SCADA Systems -->
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/OGAMS.webp" alt="OGAMS" class="img-fluid">
+                            <img src="assets/OGAMS.webp" alt="SCADA Systems" class="img-fluid" loading="lazy" decoding="async" width="1200" height="700">
                             <div class="service-overlay">
                                 <i class="fas fa-industry"></i>
                             </div>
                         </div>
                         <div class="service-content">
-                            <h3>Oil and Gas Asset Management Systems</h3>
-                            <p>These systems help track, manage, and maintain oil and gas assets such as pipelines, drilling rigs, refineries, and storage tanks. Features include:</p>
+                            <h3>SCADA Systems</h3>
+                            <p>SCADA (Supervisory Control and Data Acquisition) systems provide real-time plant intelligence and centralized control for industrial operations. Our SCADA solutions deliver live monitoring, alarm management, operator HMIs, and a data historian for full operational visibility across production sites and facilities.</p>
+                            <p>Key capabilities include Performance Ratio &amp; Yield analytics, historical trending, predictive maintenance, and consolidated dashboards that help teams optimize throughput and reduce downtime. We also provide secure, scalable connectivity to edge devices and support standard industrial protocols (Modbus, OPC UA, DNP3).</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Asset Lifecycle Management – Monitoring assets from acquisition to decommissioning.</li>
-                                <li><i class="fas fa-check"></i> Preventive Maintenance – Scheduling regular maintenance to prevent failures</li>
-                                <li><i class="fas fa-check"></i> Real-Time Asset Tracking – Using IoT and GPS to monitor asset locations and conditions.</li>
+                                <li><i class="fas fa-check"></i> Real-time Plant Intelligence – Live telemetry, dashboards and KPI monitoring.</li>
+                                <li><i class="fas fa-check"></i> Performance Ratio &amp; Yield Analytics – Track efficiency, losses and production yield.</li>
+                                <li><i class="fas fa-check"></i> Integration with EMS, BMS &amp; Weather Stations – Consolidated operational context for better decisions.</li>
+                                <li><i class="fas fa-check"></i> Alarm Management &amp; Historical Trending – Prioritize events and analyze past performance.</li>
+                                <li><i class="fas fa-check"></i> Predictive Maintenance &amp; Data Historian – Use trends and ML-ready datasets to forecast failures.</li>
+                                <li><i class="fas fa-check"></i> Secure, Scalable Connectivity – Edge device support, role-based access and protocol compatibility.</li>
+                                <li><i class="fas fa-check"></i> Customizable HMI &amp; Reports – Tailored views for operators, managers and analysts.</li>
                             </ul>
                         </div>
                     </div>
@@ -102,7 +109,7 @@
                 <div class="col-md-6" data-aos="fade-up">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/PMS.jpg" alt="PMS" class="img-fluid">
+                            <img src="assets/PMS.jpg" alt="PMS" class="img-fluid" loading="lazy" decoding="async" width="1200" height="700">
                             <div class="service-overlay">
                                 <i class="fas fa-truck"></i>
                             </div>
@@ -123,7 +130,7 @@
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="assets/CSD.jpg" alt="CSD" class="img-fluid">
+                            <img src="assets/CSD.jpg" alt="CSD" class="img-fluid" loading="lazy" decoding="async" width="1200" height="700">
                             <div class="service-overlay">
                                 <i class="fas fa-hard-hat"></i>
                             </div>
@@ -135,6 +142,30 @@
                                 <li><i class="fas fa-check"></i> Custom Web and Mobile Applications</li>
                                 <li><i class="fas fa-check"></i> System Integration </li>
                                 <li><i class="fas fa-check"></i>Data Analytics and Business Intelligence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Drone Surveillance -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="assets/image.png" alt="Drone Surveillance" class="img-fluid" loading="lazy">
+                            <div class="service-overlay">
+                                <i class="fas fa-drone"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Drone Surveillance Systems</h3>
+                            <p>Our Drone Surveillance Systems provide aerial monitoring and inspection services for large sites and remote infrastructure. Equipped with high-resolution and thermal cameras, RTK GPS and automated flight planning, drones deliver fast situational awareness and help reduce inspection time and operational risk.</p>
+                            <p>Use cases include perimeter security, pipeline and asset inspections, emergency response support, progress monitoring, and environmental surveys. Video feeds and telemetry can be integrated into SCADA, asset management platforms and command dashboards for centralized monitoring.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> High-resolution &amp; Thermal Imaging – Detailed visual and temperature inspections.</li>
+                                <li><i class="fas fa-check"></i> Automated Flight Plans &amp; BVLOS Support – Scheduled missions and beyond-visual-line-of-sight readiness where permitted.</li>
+                                <li><i class="fas fa-check"></i> Live Video Streaming &amp; Telemetry – Real-time situational awareness for operators.</li>
+                                <li><i class="fas fa-check"></i> GIS Mapping &amp; Change Detection – Track site changes and generate orthomosaics.</li>
+                                <li><i class="fas fa-check"></i> Integration with SCADA/Asset Systems – Feed aerial data into existing operational platforms.</li>
+                                <li><i class="fas fa-check"></i> Regulatory Compliance &amp; Data Security – Flight logging, encrypted storage and secure transfer.</li>
                             </ul>
                         </div>
                     </div>
